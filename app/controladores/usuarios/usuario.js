@@ -15,7 +15,7 @@ router.get('/usuarios', function (req, res) {
         .then(function (usuariosExistentes) {
             return res.json(usuariosExistentes);
         })
-        .error(function (error) {
+        .catch(function (error) {
             return res.status(error.status).json(error.message);
         });
 });
